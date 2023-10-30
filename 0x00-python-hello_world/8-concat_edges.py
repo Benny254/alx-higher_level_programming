@@ -1,14 +1,5 @@
 #!/usr/bin/python3
-
-str = "Python is an interpreted, interactive, object-oriented programming\
+str = "Python is an interactive, interpreted, object-oriented programming\
  language that combines remarkable power with very clear syntax"
-
-# Extract the desired substrings
-modified_str = str[39:66] + str[-23:-17] + str[0:6]
-
-# Replace the specified words
-modified_str = modified_str.replace("interpreted", "understood").replace("interactive", "participatory").replace("remarkable", "noteworthy")
-
-# Print the modified string
-print(modified_str)
-
+str = str[39:66] + str[106:112] + str[:6]
+print(str)
