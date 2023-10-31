@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-char = 97
-while char < 123:
-    print("{:c}".format(char), end='')
-    char += 1
-
+i = 0
+alphabet = "abcdefghijklmnopqrstuvwxyz"
+while i < len(alphabet):
+    print("{}".format(alphabet[i]), end="")
+    i += 1
