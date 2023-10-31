@@ -1,10 +1,6 @@
 #!/usr/bin/python3
+num = 0
+while num < 100:
+    print("{:02d}".format(num), end='\n' if num == 99 else ", ")
+    num += 1
 
-n = 0
-result = []
-
-while n < 100:
-    result.append("{:0>2}".format(n))
-    n += 1
-
-print(", ".join(result))
