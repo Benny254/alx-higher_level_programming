@@ -1,3 +1,6 @@
 #!/usr/bin/python3
-for i in "abcdefghijklmnopqrstuvwxyz":
-    print("{}".format(i), end="")
+i = 0
+while i < 26:
+    char = chr(ord('a') + i)
+    print("{}".format(char), end="")
+    i += 1
