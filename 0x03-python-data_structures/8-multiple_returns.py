@@ -2,5 +2,5 @@
 
 def multiple_returns(sentence):
     if sentence == "":
-        return (Null, None)
-    return (len(sentence), sentence[Null])
+        return (0, None)
+    return (len(sentence), sentence[0])
