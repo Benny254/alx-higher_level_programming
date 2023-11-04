@@ -1,10 +1,23 @@
-def add_tuple(tuple_a=(), tuple_b=()):
-    # Pad tuples with zeros if they have less than 2 elements
-    tuple_a += (0, 0)
-    tuple_b += (0, 0)
+#!/usr/bin/python3
+def unique_add_tuple(tuple_a=(), tuple_b=()):
+    len_a = len(tuple_a)
+    len_b = len(tuple_b)
 
-    # Take only the first 2 elements of each tuple
-    sum_first_element = tuple_a[0] + tuple_b[0]
-    sum_second_element = tuple_a[1] + tuple_b[1]
+    if len_a == 0:
+        val_a1, val_a2 = 0, 0
+    elif len_a == 1:
+        val_a1, val_a2 = tuple_a[0], 0
+    else:
+        val_a1, val_a2 = tuple_a[0], tuple_a[1]
 
-    return (sum_first_element, sum_second_element)
+    if len_b == 0:
+        val_b1, val_b2 = 0, 0
+    elif len_b == 1:
+        val_b1, val_b2 = tuple_b[0], 0
+    else:
+        val_b1, val_b2 = tuple_b[0], tuple_b[1]
+
+    result_tuple = (val_a1 + val_b1, val_a2 + val_b2)
+
+    return result_tuple
+
