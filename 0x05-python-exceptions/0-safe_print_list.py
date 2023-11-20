@@ -3,13 +3,13 @@
 
 def safe_print_list(my_list=[], x=0):
     ret = 0
-    i = 0
-    while i < x:
+    w = 0
+    while w < x:
         try:
-            print("{}".format(my_list[i]), end="")
+            print("{}".format(my_list[w]), end="")
             ret += 1
         except IndexError:
             break
-        i += 1
+        w += 1
     print("")
     return ret
