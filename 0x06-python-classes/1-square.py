@@ -1,7 +1,19 @@
 #!/usr/bin/python3
-# 1-square.py
+"""
+This chapter defines a class Square based on a previous document.
+"""
+
+
 class Square:
-    """how to define a class."""
+    """The Square class defines a square.
+
+    Attributes:
+       None.
+    """
     def __init__(self, size):
-        """initializing new square"""
+        """ Initializing an attributes the Square class has.
+        Args:
+           size (int): the size of the square, private attribute.
+
+        """
         self.__size = size
