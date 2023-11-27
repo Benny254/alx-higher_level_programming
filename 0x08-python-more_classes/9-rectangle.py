@@ -17,37 +17,18 @@ class Rectangle:
     print_symbol = '#'
 
     def __init__(self, width=0, height=0):
-        """
-
-        Checks the parameters and initializes some values
-
-        Args:
-            width (:obj:`int`, optional): The width of the Rectangle.
-            height (:obj:`int`, optional): The height of the Rectangle.
-
-        """
 
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
 
     def __del__(self):
-        """
-
-        Prints a message when an instance of Rectangle is deleted
-
-        """
 
         Rectangle.number_of_instances -= 1
         print('Bye rectangle...')
 
     @property
     def width(self):
-        """
-
-        Returns the width of the Rectangle
-
-        """
 
         return self.__width
 
