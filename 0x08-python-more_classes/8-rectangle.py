@@ -98,18 +98,6 @@ class Rectangle:
         self.__height = value
 
     def __check_valid_width(self, width):
-        """
-
-        Checks if the width is a valid integer
-
-        Args:
-            width (int): The width of the Rectangle.
-
-        Raises:
-            TypeError: If `width` type is not `int`.
-            ValueError: If `width` is less than `0`.
-
-        """
 
         if self.__check_int_value(width) is False:
             raise TypeError('width must be an integer')
@@ -118,18 +106,6 @@ class Rectangle:
             raise ValueError('width must be >= 0')
 
     def __check_valid_height(self, height):
-        """
-
-        Checks if the height is a valid integer
-
-        Args:
-            height (int): The height of the Rectangle.
-
-        Raises:
-            TypeError: If `height` type is not `int`.
-            ValueError: If `height` is less than `0`.
-
-        """
 
         if self.__check_int_value(height) is False:
             raise TypeError('height must be an integer')
