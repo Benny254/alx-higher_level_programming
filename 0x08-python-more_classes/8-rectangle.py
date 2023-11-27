@@ -138,17 +138,6 @@ class Rectangle:
             raise ValueError('height must be >= 0')
 
     def __check_int_value(self, value):
-        """
-
-        Checks if the value is an integer
-
-        Args:
-            value (int): The number to verify
-
-        Returns:
-            int: If is a int `True`, `False` otherwise.
-
-        """
 
         if type(value) is int:
             return True
@@ -156,18 +145,6 @@ class Rectangle:
         return False
 
     def __check_positive_value(self, value):
-        """
-
-        Checks if the value is a positive integer
-
-        Args:
-            value (int): The number to verify
-
-        Returns:
-            int: `True` If value is greater than
-            or equal to 0, `False` otherwise.
-
-        """
 
         if value >= 0:
             return True
