@@ -53,46 +53,17 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        """
-
-        Checks the parameters and set the size of the Rectangle
-
-        Args:
-            value (int): The width of the Rectangle.
-
-        Raises:
-            TypeError: If `value` type is not `int`.
-            ValueError: If `value` is less than `0`.
-
-        """
 
         self.__check_valid_width(value)
         self.__width = value
 
     @property
     def height(self):
-        """
-
-        Returns the width of the Rectangle
-
-        """
 
         return self.__height
 
     @height.setter
     def height(self, value):
-        """
-
-        Checks the parameters and set the size of the Rectangle
-
-        Args:
-            value (int): The height of the Rectangle.
-
-        Raises:
-            TypeError: If `value` type is not `int`.
-            ValueError: If `value` is less than `0`.
-
-        """
 
         self.__check_valid_height(value)
         self.__height = value
