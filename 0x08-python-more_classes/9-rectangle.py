@@ -7,11 +7,6 @@ A module with a Rectangle that does nothing
 
 
 class Rectangle:
-    """
-
-    An empty Rectangle class
-
-    """
 
     number_of_instances = 0
     print_symbol = '#'
