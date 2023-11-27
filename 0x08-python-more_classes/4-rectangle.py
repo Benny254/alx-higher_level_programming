@@ -98,16 +98,11 @@ class Rectangle:
         return self.__width * 2 + self.__height * 2
 
     def __draw_rectangle(self):
-        """
 
-        Draw the Rectangle with their size
-
-        Returns:
             str: `Empty` If width or height is `0`,
             otherwise returns a string with the Rectangle.
 
-        """
-
+        
         rect_str = ''
         w = self.__width
         h = self.__height
