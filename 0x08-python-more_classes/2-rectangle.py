@@ -14,15 +14,6 @@ class Rectangle:
     """
 
     def __init__(self, width=0, height=0):
-        """
-
-        To Check the parameters and initializes some values
-
-        Args:
-            width (:obj:`int`, optional): The width of the Rectangle.
-            height (:obj:`int`, optional): The height of the Rectangle.
-
-        """
 
         self.width = width
         self.height = height
