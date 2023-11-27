@@ -1,99 +1,66 @@
 #!/usr/bin/python3
-"""
-
-A module with a Rectangle that does nothing
-
-"""
+"""Defines a Rectangle class."""
 
 
 class Rectangle:
 
     def __init__(self, width=0, height=0):
+        """Initialize a new Rectangle.
 
+        Args:
+            width (int): The width of the new rectangle.
+            height (int): The height of the new rectangle.
+        """
         self.width = width
         self.height = height
 
     @property
     def width(self):
-
+        """Get/set the width of the Rectangle."""
         return self.__width
 
     @width.setter
     def width(self, value):
-
-        self.__check_valid_width(value)
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        if value < 0:
+            raise ValueError("width must be >= 0")
         self.__width = value
 
     @property
     def height(self):
-
+        """Get/set the height of the Rectangle."""
         return self.__height
 
     @height.setter
     def height(self, value):
-
-        self.__check_valid_height(value)
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
         self.__height = value
 
-    def __check_valid_width(self, width):
-
-        if self.__check_int_value(width) is False:
-            raise TypeError('width must be an integer')
-
-        if self.__check_positive_value(width) is False:
-            raise ValueError('width must be >= 0')
-
-    def __check_valid_height(self, height):
-
-        if self.__check_int_value(height) is False:
-            raise TypeError('height must be an integer')
-
-        if self.__check_positive_value(height) is False:
-            raise ValueError('height must be >= 0')
-
-    def __check_int_value(self, value):
-
-        if type(value) is int:
-            return True
-
-        return False
-
-    def __check_positive_value(self, value):
-
-        if value >= 0:
-            return True
-
-        return False
-
     def area(self):
-
-        return self.__width * self.__height
+        """Return the area of the Rectangle."""
+        return (self.__width * self.__height)
 
     def perimeter(self):
-
+        """Return the perimeter of the Rectangle."""
         if self.__width == 0 or self.__height == 0:
-            return 0
-
-        return self.__width * 2 + self.__height * 2
-
-    def __draw_rectangle(self):
-
-        rect_str = ''
-        w = self.__width
-        h = self.__height
-
-        if w == 0 or h == 0:
-            return rect_str
-
-        for num in range(h):
-            for value in range(w):
-                rect_str += '#'
-
-            if num != h - 1:
-                rect_str += '\n'
-
-        return rect_str
+            return (0)
+        return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
+        """Return the printable representation of the Rectangle.
 
-        return self.__draw_rectangle()
+        Represents the rectangle with the # character.
+        """
+        if self.__width == 0 or self.__height == 0:
+            return ("")
+
+        rect = []
+        for i in range(self.__height):
+            [rect.append('#') for j in range(self.__width)]
+            if i != self.__height - 1:
+                rect.append("\n")
+        return ("".join(rect))
