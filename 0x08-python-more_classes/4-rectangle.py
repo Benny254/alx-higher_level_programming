@@ -71,26 +71,10 @@ class Rectangle:
         return False
 
     def area(self):
-        """
-
-        Computes the area of a Rectangle.
-
-        Returns:
-            int: The area of a Rectangle.
-
-        """
 
         return self.__width * self.__height
 
     def perimeter(self):
-        """
-
-        Computes the perimeter of a Rectangle.
-
-        Returns:
-            int: The perimeter of a Rectangle.
-
-        """
 
         if self.__width == 0 or self.__height == 0:
             return 0
@@ -115,20 +99,11 @@ class Rectangle:
         return rect_str
 
     def __str__(self):
-        """
-
-        Returns a string with the representation of the Rectangle.
-
-        """
 
         return self.__draw_rectangle()
 
     def __repr__(self):
-        """
 
-        Returns the representation of the Rectangle.
-
-        """
         w = str(eval('self.width'))
         h = str(eval('self.height'))
 
