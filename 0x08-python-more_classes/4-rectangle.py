@@ -98,7 +98,6 @@ class Rectangle:
         return self.__width * 2 + self.__height * 2
 
     def __draw_rectangle(self):
-        
         rect_str = ''
         w = self.__width
         h = self.__height
