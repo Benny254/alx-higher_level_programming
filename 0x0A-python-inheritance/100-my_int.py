@@ -1,17 +1,14 @@
 #!/usr/bin/python3
-"""To Define a function that adds attributes to objects."""
+"""To Define a class MyInt that inherits from int."""
 
 
-def add_attribute(obj, att, value):
-    """To add a new attribute to an object if possible.
+class MyInt(int):
+    """MyInt class body"""
 
-    Args:
-        obj (any): an object to add an attribute to.
-        att (str): The name of the attribute to add to obj.
-        value (any): The value of att.
-    Raises:
-        TypeError: If the attribute cannot be added.
-    """
-    if not hasattr(obj, "__dict__"):
-        raise TypeError("can't add new attribute")
-    setattr(obj, att, value)
+    def __eq__(self, value):
+        """Override == opeartor with !=."""
+        return self.real != value
+
+    def __ne__(self, value):
+        """Override != operator with ==."""
+        return self.real == value
