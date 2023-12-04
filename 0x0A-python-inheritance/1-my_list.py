@@ -5,9 +5,12 @@ A module to prints a list in ascending order
 
 
 class MyList(list):
+    """
+    The class to customize the list class
+    """
     def print_sorted(self):
         """
-        Prints a list in ascending order
+        To print a list in ascending order
 
         Sort a list and then prints on the output
         """
