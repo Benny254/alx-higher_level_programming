@@ -3,7 +3,7 @@
 
 
 def pascal_triangle(n):
-   """pascal triangle class body."""
+    """pascal triangle class body."""
     if n <= 0:
         return []
 
