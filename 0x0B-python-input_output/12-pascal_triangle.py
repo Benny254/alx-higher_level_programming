@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-"""pascal_traigle module."""
+"""the pascal_traigle module."""
 
 
 def pascal_triangle(n):
+    """ the pascal traigle class body.
+    """
     if n <= 0:
         return []
 
