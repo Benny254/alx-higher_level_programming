@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Write_file module."""
+""" To define Write_file module."""
 
 def write_file(filename="", text=""):
     """Write a string to a UTF8 text file.
