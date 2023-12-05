@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""to append_after module"""
+"""append_after module"""
 
 
 def append_after(filename="", search_string="", new_string=""):
-     """the class body.
+     """class body.
     """
     text = ""
     with open(filename) as r:
