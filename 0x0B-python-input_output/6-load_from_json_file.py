@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""To load from json"""
+"""load from json"""
 import json
 
 
-def load_from_json_file(filename):
-    """To load from json to file"""
-    with open(filename, encoding="utf-8") as file_loaded:
+def load_from_json_file(fname):
+    """load from json to file"""
+    with open(fname, encoding="utf-8") as file_loaded:
         return json.load(file+loaded)
