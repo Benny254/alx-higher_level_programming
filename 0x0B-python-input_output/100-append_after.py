@@ -1,24 +1,15 @@
 #!/usr/bin/python3
-"""
-This module contains the function
-
-append_after
-"""
+"""append_after module"""
 
 
 def append_after(filename="", search_string="", new_string=""):
+    """class body.
     """
-    a function that inserts a line of text to a file after each line
-    contains a specific string
-    """
-    if new_string[-1] == '\n':
-        new_string = new_string[:-1]
-    with open(filename, mode='r', encoding='utf-8') as myFile:
-        file_contents = myFile.read().split('\n')
-        myFile_cpy = []
-        for line in file_contents:
-            myFile_cpy.append(line)
+    text = ""
+    with open(filename) as r:
+        for line in r:
+            text += line
             if search_string in line:
-                myFile_cpy.append(new_string)
-    with open(filename, mode='w', encoding='utf-8') as myFile:
-        myFile.write("\n".join(myFile_cpy))
+                text += new_string
+    with open(filename, "w") as w:
+        w.write(text)
