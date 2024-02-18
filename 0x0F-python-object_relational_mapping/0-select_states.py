@@ -1,18 +1,26 @@
 #!/usr/bin/python3
-'''
-Get all states
-'''
-
+"""
+This module connects to a MySQL server and lists all
+states from a database.
+"""
 import MySQLdb
-from sys import argv
+import sys
+
 
 if __name__ == "__main__":
-    conn = MySQLdb.connect(host="localhost", port=3306, charset="utf8",
-                           user=argv[1], passwd=argv[2], db=argv[3])
-    cur = conn.cursor()
-    cur.execute("SELECT * FROM states ORDER BY states.id ASC")
-    query_rows = cur.fetchall()
-    for row in query_rows:
-        print(row)
-    cur.close()
-    conn.close()
+
+    db = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
+                         password=sys.argv[2], database=sys.argv[3])
+
+    cursor = db.cursor()
+
+    sql = "SELECT * FROM states ORDER BY id ASC"
+
+    cursor.execute(sql)
+
+    results = cursor.fetchall()
+
+    for row in results:
+        print("(" + str(row[0]) + ", '" + str(row[1]) + "')")
+
+    db.close()
