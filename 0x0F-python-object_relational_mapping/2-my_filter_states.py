@@ -1,22 +1,25 @@
 #!/usr/bin/python3
-'''
-Takes in an argument and displays all values in the
-states table of hbtn_0e_0_usa where name matches the argument.
-'''
+""" This module connects to a MySQL server and lists all
+states from a database with specified name in argv. """
 
-import MySQLdb
-from sys import argv
 
 if __name__ == "__main__":
 
-        conn = MySQLdb.connect("localhost", argv[1], argv[2], argv[3])
-        cur = conn.cursor()
+    import MySQLdb
+    import sys
 
-        cur.execute("SELECT * FROM states\
-                     WHERE name='{}' ORDER BY states.id ASC".format(argv[4]))
-        query_rows = cur.fetchall()
+    db = MySQLdb.connect("localhost", sys.argv[1], sys.argv[2], sys.argv[3])
 
-        for row in query_rows:
-                if row[1] == argv[4]:
-                        print(row)
-        cur.close()
+    cursor = db.cursor()
+
+    sql = "SELECT * FROM states"
+    sql += " WHERE name='{}' ORDER BY id ASC".format(sys.argv[4])
+
+    cursor.execute(sql)
+
+    results = cursor.fetchall()
+
+    for row in results:
+        print("(" + str(row[0]) + ", '" + str(row[1]) + "')")
+
+    db.close()
