@@ -1,4 +1,4 @@
-#!/usr/bin/node
+#!/usr/bin/env node
 
 const request = require('request');
 
@@ -14,5 +14,5 @@ request.get(url, (error, response, body) => {
 				          const characterId = '18';
 				          const count = films.filter(film => film.characters.includes(`https://swapi-api.alx-tools.com/api/people/${characterId}/`)).length;
 				          console.log(count);
-				        }
+				    }
 });
